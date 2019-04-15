@@ -7,11 +7,11 @@ College education nowadays is a big investment of both money and time, while a c
 
 Data Source: 2013-2017 American Community Survey (ACS) Public Use Microdata Sample (PUMS) released by US Census Bureau
 
-Overview:
+## Overview:
 
 In 2013-2017, the top 5 of the highest paying major categories and top 10 of the highest paying majors are visualized. In the visualization, you will explore the data including the unemployment rate, the annual income, the gender ratio, and the trend over years (2013-2017) by 15 major categories and 137 detailed majors in the United States. There is an interactive tool in the end for you to customize the information you want.
 
-The team:
+## The Team:
 
 Haihui Cao: MIDS student, UC Berkeley School of Information, christinehcao@berkeley.edu
 
