@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    
+    <title>W209 College Major Final Project</title>
+
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <!-- Custom styles for this template -->
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.2.0/leaflet.css">
+    <link href="css/scrolling-nav.css" rel="stylesheet">
+    <link href="css/styles.css" rel="stylesheet">
+    
+    <!-- script -->
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lodash.js/4.17.4/lodash.min.js"></script>
+    <script type="text/javascript" src="http://rawgit.com/vitmalina/w2ui/master/dist/w2ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.3/leaflet.js"></script>
+    <script src="https://d3js.org/d3-queue.v3.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <style>
+    body,h1,h2,h3,h4,h5,h6 {font-family: "Raleway", sans-serif}
+    h1 {
+    margin-top: 30px;
+    }
+    body, html {
+    height: 100%;
+    line-height: 1.8;
+    }
+    /* Full height image header */
+    .bgimg-1 {
+    background-position: center;
+    background-size: cover;
+    background-image: url("img/image4.jpeg"); 
+    min-height: 100%;
+    }
+    .w3-bar .w3-button {
+    padding: 16px;
+    }
+    </style>
+
+</head>
+
+<body id="page-top">
+
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+    <div class="w3-bar w3-white w3-card" id="myNavbar">
+      <a href="#home" class="w3-bar-item w3-button w3-wide">College Major Visualized</a>
+    <!-- Right-sided navbar links -->
+    <div class="w3-right w3-hide-small">
+      <a href="#overview" class="w3-bar-item w3-button"> Overview</a>
+      <a href="#map" class="w3-bar-item w3-button"> Explore by State</a>
+      <a href="#major" class="w3-bar-item w3-button"> Explore by Major</a>
+      <a href="#year" class="w3-bar-item w3-button"> Explore by Year</a>
+      <a href="#tool" class="w3-bar-item w3-button"> Interactive Tool</a>
+      <a href="#team" class="w3-bar-item w3-button"> Team</a>
+
+    </div>
+    </div>
+    </div>
+
+    <!-- Header with full-height image -->
+    <header class="bgimg-1 w3-display-container w3-grayscale-min" id="home">
+    <div class="w3-display-left w3-text-black" style="padding:48px">
+    <span class="w3-jumbo w3-hide-small">The Economic Guide to Picking a College Major</span><br>
+    <span class="w3-xlarge">College education nowadays is a big investment of both money and time, while a college degree is no guarantee of economic success. With some guidance on choosing the college majors, college students may take at least some steps on improving the outlook of economic returns. By analyzing the data on college majors and financial returns, our goal is to understand how big a financial difference choice of college major can make and provide a tool for stakeholders such as students and their parents to easily explore the earning potential.</span>
+    <div class="spacer" style="height:50px"></div>
+    <p><a href="#overview" class="w3-button w3-blue-grey w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-center">Let's get started!</a></p>
+    <div class="spacer" style="height:25px"></div>
+    <p><a href="#tool" class="w3-button w3-blue-grey w3-padding-large w3-large w3-margin-top w3-opacity w3-hover-opacity-off w3-center">Skip to interactive tool</a></p>
+    </div>
+    </header>
+
+    <!-- overview Section -->
+    <div class="w3-container w3-light-grey" style="padding:128px 16px" id="overview">
+    <div class = "greybox">
+    <h1 class="w3-center">Overview</h1>
+    <p class="w3-center w3-large">In 2013-2017, below are the top 5 of the highest paying major categories and top 10 of the highest paying majors. In the following pages, you will explore the data including the unemployment rate, the annual income, the gender ratio, and the trend over years (2013-2017) by 15 major categories and 137 detailed majors in the United States. There is an interactive tool in the end for you to customize the information you want.</p> 
+    </div>
+    
+    <p class="w3-center w3-large">Data Source: 2013-2017 American Community Survey (ACS) Public Use Microdata Sample (PUMS) released by US Census Bureau</p> 
+    <div class="spacer" style="height:25px"></div>
+    <center>
+    <div class='tableauPlaceholder' id='viz1555277073863' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;T3&#47;T38F3XQ6M&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;T38F3XQ6M' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;T3&#47;T38F3XQ6M&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1555277073863');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1100px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='650px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1100px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='650px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='3050px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </center>
+    </div>
+
+
+
+    <!-- Exploy by Map Section -->
+    <div class="w3-container w3-light-grey" style="padding:64px 16px" id="map">
+    <h1 class="w3-center">Explore By State</h1>
+    <p class="w3-center w3-large">To begin with, please choose the year and the state from the list. <br>Then, you may explore the employment rate, annual income and gender ratio in different states and year.</p> 
+    
+    <div class="spacer" style="height:25px"></div>
+    <center>
+    <div class='tableauPlaceholder' id='viz1554849038190' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;8S&#47;8SM37C5B6&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;8SM37C5B6' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;8S&#47;8SM37C5B6&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1554849038190');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1000px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='850px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1000px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='850px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='3050px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </center>
+    </div>
+
+    <!-- Explore by Major Section -->
+    <div class="w3-container w3-light-grey" style="padding:64px 16px" id="major">
+    <h1 class="w3-center">Explore By Major</h1>
+    <p class="w3-center w3-large">Double click one major category that you have interest and explore the details of each major. </p> 
+    
+<center>    
+<div class='tableauPlaceholder' id='viz1554873971104' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;43&#47;43HQR42J4&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;43HQR42J4' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;43&#47;43HQR42J4&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1554873971104');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.minWidth='1000px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='850px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)*0.75+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.minWidth='1000px';vizElement.style.maxWidth='100%';vizElement.style.minHeight='850px';vizElement.style.maxHeight=(divElement.offsetWidth*0.75)*0.75+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='3050px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)*0.75+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+
+</center>
+      
+    </div>
+
+    <!-- Explore by Year Section -->
+    <div class="w3-container w3-light-grey" style="padding:64px 16px" id="year">
+    <h1 class="w3-center">Explore by Year</h1>
+    <p class="w3-center w3-large">You may also take a look at the trend of employment rate and median income for different majors.</p> 
+ 
+    <div class='tableauPlaceholder' id='viz1554641795377' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;K2&#47;K22H6SYDZ&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='path' value='shared&#47;K22H6SYDZ' /> <param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;K2&#47;K22H6SYDZ&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1554641795377');                    var vizElement = divElement.getElementsByTagName('object')[0];                    if ( divElement.offsetWidth > 800 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)*0.75+'px';} else if ( divElement.offsetWidth > 500 ) { vizElement.style.width='100%';vizElement.style.height=(divElement.offsetWidth*0.75)*0.75+'px';} else { vizElement.style.width='100%';vizElement.style.minHeight='2175px';vizElement.style.maxHeight=(divElement.offsetWidth*1.77)*0.75+'px';}                     var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>    
+    
+    </div>
+        
+    <!-- Tool Section -->
+    <div class="w3-container w3-light-grey" style="padding:64px 16px" id="tool">
+    <h1 class="w3-center">Interactive Tool</h1>
+    <p class="w3-center w3-large">Choose the majors you are interested in and check how it compares with each other.</p> 
+    <center>
+    <div class='tableauPlaceholder' id='viz1554645580388' style='position: relative'><noscript><a href='#'><img alt=' ' src='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProject_2_15546454999930&#47;Tool&#47;1_rss.png' style='border: none' /></a></noscript><object class='tableauViz'  style='display:none;'><param name='host_url' value='https%3A%2F%2Fpublic.tableau.com%2F' /> <param name='embed_code_version' value='3' /> <param name='site_root' value='' /><param name='name' value='FinalProject_2_15546454999930&#47;Tool' /><param name='tabs' value='no' /><param name='toolbar' value='yes' /><param name='static_image' value='https:&#47;&#47;public.tableau.com&#47;static&#47;images&#47;Fi&#47;FinalProject_2_15546454999930&#47;Tool&#47;1.png' /> <param name='animate_transition' value='yes' /><param name='display_static_image' value='yes' /><param name='display_spinner' value='yes' /><param name='display_overlay' value='yes' /><param name='display_count' value='yes' /><param name='filter' value='publish=yes' /></object></div>                <script type='text/javascript'>                    var divElement = document.getElementById('viz1554645580388');                    var vizElement = divElement.getElementsByTagName('object')[0];                    vizElement.style.width='1000px';vizElement.style.height='827px';                    var scriptElement = document.createElement('script');                    scriptElement.src = 'https://public.tableau.com/javascripts/api/viz_v1.js';                    vizElement.parentNode.insertBefore(scriptElement, vizElement);                </script>
+    </center>
+    </div>
+        
+
+        
+    <!-- Team Section -->
+    <div class="w3-container w3-light-grey" style="padding:64px 16px" id="team">
+    <h1 class="w3-center">THE TEAM</h1>
+    <p class="w3-center w3-large">College Major visualization was created in the Spring 2019 term for UC Berkeley Data Science course: w209 Data Visualization.</p> 
+
+    <div class="w3-row-padding w3-grayscale w3-center" style="margin-top:64px; margin-left:auto; width:100%;">
+        <div class="w3-half w3-margin-bottom">
+        <div class="w3-card">
+        <img src="img/haihui1.jpg" alt="Haihui" style="width:50%" >
+        <div class="w3-container">
+          <h3>Haihui Cao</h3>
+          <p class="w3-opacity">MIDS Student</p>
+          <p><a href="https://www.linkedin.com/in/caohaihui/">LinkedIn</a></p>
+          <p><button class="w3-button w3-light-grey w3-block" onclick="window.location.href='mailto:christinehcao@berkeley.edu'"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+        </div>
+        </div>
+
+
+        <div class="w3-half w3-margin-bottom">
+        <div class="w3-card">
+        <img src="img/wang.jpg" alt="Teresa" style="width:100%">
+        <div class="w3-container">
+          <h3>Yueh-Wen (Teresa) Wang</h3>
+          <p class="w3-opacity">MIDS Student</p>
+          <p><a href="https://www.linkedin.com/in/yueh-wen-teresa-wang-40598722/">LinkedIn</a></p>
+          <p><button class="w3-button w3-light-grey w3-block" onclick="window.location.href='mailto:wang2731@berkeley.edu'"><i class="fa fa-envelope"></i> Contact</button></p>
+        </div>
+        </div>
+        </div>
+    </div>
+
+    </div>
+
+
+</body>
+</html>
