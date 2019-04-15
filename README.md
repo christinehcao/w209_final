@@ -14,4 +14,5 @@ In 2013-2017, the top 5 of the highest paying major categories and top 10 of the
 The team:
 
 Haihui Cao: MIDS student, UC Berkeley School of Information, christinehcao@berkeley.edu
+
 Yueh-Wen (Teresa) Wang: MIDS student, UC Berkeley School of Information, wang2731@berkeley.edu
